@@ -3,25 +3,25 @@ const getById = id => document.getElementById(id);
 const startGameBtn = getById('start-button');
 
 const difficultyLabels = [
-  getById('label_easy'),
-  getById('label_medium'),
-  getById('label_hard')
+  getById('label-easy'),
+  getById('label-medium'),
+  getById('label-hard'),
 ];
 
 const difficultyMap = {
   'Простой': {
     'class':'three-card-field',
-    'cardCount': 3,
+    'cardCount': 3
   },
 
   'Средний': {
     'class': 'six-card-field',
-    'cardCount': 6,
+    'cardCount': 6
   },
 
   'Сложный': {
     'class': 'ten-card-field',
-    'cardCount': 10,
+    'cardCount': 10
   },
 };
 
@@ -29,7 +29,7 @@ let difficulty = getById('easy').value;
 let cardWasPressed = false;
 
 difficultyLabels.forEach(difficultyBtn => {
-  difficultyBtn.onclick = function () {
+  difficultyBtn.onclick = function() {
     difficultyLabels.forEach(difficultyBtn => difficultyBtn.classList.remove('level_active'));
     this.classList.add('level_active');
     difficulty = this.children[0].value;
@@ -45,7 +45,7 @@ const createCards = (number, field) => {
     const looserCard = document.createElement('div');
     if (i === randomCard) {
       cardWrap.className = 'card-wrap';
-      cardWrap.className = 'card-wrap_hover';
+      cardWrap.classList.add('card-wrap_hover');
       field.append(cardWrap);
       cardBack.className = 'card-back';
       cardWrap.append(cardBack);
@@ -53,7 +53,7 @@ const createCards = (number, field) => {
       cardWrap.append(winnerCard);
     } else {
       cardWrap.className = 'card-wrap';
-      cardWrap.className = 'card-wrap_hover'
+      cardWrap.classList.add('card-wrap_hover');
       field.append(cardWrap);
       cardBack.className = 'card-back';
       cardWrap.append(cardBack);
@@ -77,7 +77,7 @@ startGameBtn.addEventListener('click', () => {
   document.querySelectorAll('.card-wrap').forEach(card => {
     card.addEventListener('click', () => {
       if (cardWasPressed) {
-        cardsField.style.display = none;
+        cardsField.style.display = 'none';
         levelMenu.style.display = '';
         cardWasPressed = false;
       } else {

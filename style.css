@@ -2,11 +2,11 @@
 
 .wrap {
   background-image: url(./img/Background.png);
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   font-family: "Roboto";
   color: #fff;
-  max-width: 1324px;
   min-width: 320px;
   min-height: 1024px;
   margin: auto;
@@ -35,7 +35,8 @@
 
 .level {
   display: flex;
-  margin: 0 0 23px 0;
+  margin-bottom: 23px;
+  position: relative;
 }
 
 .easy,
@@ -48,16 +49,23 @@
   font-size: 50px;
   font-weight: 700;
   margin: 0;
-  padding: 0 0 0 48px;
+  padding-left: 48px;
   cursor: pointer;
+}
+
+.easy:hover,
+.medium:hover,
+.hard:hover {
+  opacity: .7;
 }
 
 .level:visited::before,
 .level:hover::before,
 .level:active::before,
 .level_active:before {
-  content: ' ';
+  content: '';
   background-image: url(./img/Rectangle2.png);
+  background-repeat: no-repeat;
   background-size: cover;
   border: none;
   width: 25px;
@@ -80,6 +88,11 @@
   height: 95px;
   margin: 0;
   padding: 0;
+}
+
+.start-button:hover {
+  padding: 0 0 15px 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .pictures {
@@ -108,13 +121,13 @@
   width: 218px;
   height: 341px;
   cursor: pointer;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
   transform-style: preserve-3d;
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 
-.card-wrap_hover {
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+.card-wrap_hover:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
   transform: rotate(-3.08deg) translateY(-15px);
   transition: .4s ease;
 }
@@ -126,6 +139,7 @@
   background-image: url(./img/card.png);
   background-repeat: no-repeat;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .winner-card {
@@ -135,6 +149,7 @@
   background-image: url(./img/card2-bag.png);
   background-repeat: no-repeat;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform: rotateY(180deg);
 }
 
@@ -145,6 +160,7 @@
   background-image: url(./img/card-game-over.png);
   background-repeat: no-repeat;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform: rotateY(180deg);
 }
 
