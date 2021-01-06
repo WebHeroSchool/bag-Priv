@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.wrap {
+  background-image: url(./img/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  font-family: "Roboto";
+  color: #fff;
+  max-width: 1340px;
+  min-width: 320px;
+  min-height: 1024px;
+  margin: auto;
+}
+
+.menu {
+  margin: 130px 100px 0;
+}
+
+.title h2 {
+  font-size: 57px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.title h3 {
+  font-size: 19px;
+  font-weight: 400;
+  margin:  0 0 60px 0;
+}
+
+.difficulty-levels {
+  position: relative;
+  margin-bottom: 113px;
+}
+
+.level {
+  display: flex;
+  margin-bottom: 23px;
+  position: relative;
+}
+
+.easy,
+.medium,
+.hard {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+  padding-left: 48px;
+  cursor: pointer;
+}
+
+.easy:hover,
+.medium:hover,
+.hard:hover {
+  opacity: .7;
+}
+
+.level:visited::before,
+.level:hover::before,
+.level:active::before,
+.level_active:before {
+  content: '';
+  background-image: url(./img/Rectangle2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+
+.start-button {
+  background-color: #D62B2E;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  width: 352px;
+  height: 95px;
+  margin: 0;
+  padding: 0;
+}
+
+.start-button:hover {
+  padding: 0 0 5px 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.pictures {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+}
+
+.bottom-card {
+  width: 218px;
+  height: 341px;
+  transform: rotate(11.9deg);
+}
+
+.top-card {
+  position: relative;
+  right: 45px;
+  top: 20px;
+  width: 218px;
+  height: 341px;
+  transform: rotate(39.26deg);
+}
+
+.card-wrap {
+  position: relative;
+  width: 218px;
+  height: 341px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-wrap_hover:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
+  transform: rotate(-3.08deg) translateY(-15px);
+  transition: .4s ease;
+}
+
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/card.png);
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.winner-card {
+  position: absolute;
+  width: 218px;
+  height: 341px;
+  background-image: url(./img/card2-bag.png);
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.looser-card {
+  position: absolute;
+  width: 218px;
+  height: 341px;
+  background-image: url(./img/card-game-over.png);
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.card-click {
+  transform: rotateY(180deg);
+}
+
+.three-card-field {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 702px;
+  height: 341px;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.six-card-field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 702px;
+  height: 706px;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.ten-card-field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1186px;
+  height: 706px;
+  margin: auto;
+  perspective: 1000px;
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .wrap {
+    max-width: 1100px;
+    max-height: 1000px;
+    min-height: 805px;
+    margin: auto;
+  }
+
+  .menu {
+    margin: 30px 30px;
+  }
+
+  .title h2 {
+    font-size: 50px;
+  }
+
+  .easy,
+  .medium,
+  .hard {
+    font-size: 43px;
+    margin: 0;
+  }
+
+  .start-button {
+    font-size: 28px;
+    margin: 0 0 23px 0;
+    width: 330px;
+    height: 90px;
+  }
+
+  .pictures {
+    top: 40%;
+    right: 8%;
+  }
+
+  .bottom-card,
+  .top-card {
+    width: 173px;
+    height: 269px;
+  }
+
+  .difficulty-levels {
+    margin-bottom: 100px;
+  }
+
+  .card-wrap,
+  .card-back,
+  .winner-card,
+  .looser-card {
+    width: 173px;
+    height: 269px;
+    background-size: 175px 271px;
+  }
+
+  .three-card-field {
+    width: 567px;
+    height: 269px;
+  }
+
+  .six-card-field {
+    width: 567px;
+    height: 562px;
+  }
+
+  .ten-card-field {
+    width: 961px;
+    height: 562px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrap {
+    max-width: 1000px;
+    max-height: 1024px;
+    min-height: 1024px;
+  }
+
+  .menu {
+    margin: auto 50px;
+  }
+
+  .title h2 {
+    font-size: 50px;
+    margin: 0 0 8px 0;
+  }
+
+  .easy,
+  .medium,
+  .hard {
+    font-size: 43px;
+    margin: 0;
+  }
+
+  .start-button {
+    width: 340px;
+    height: 90px;
+    margin: 0 0 20px 0;
+    font-size: 28px;
+  }
+
+  .difficulty-levels {
+    margin-bottom: 100px;
+  }
+
+  .pictures {
+    display: none;
+  }
+
+  .card-wrap,
+  .card-back,
+  .winner-card,
+  .looser-card {
+    width: 145px;
+    height: 230px;
+    background-size: 146px 232px;
+  }
+
+  .three-card-field {
+    width: 483px;
+    height: 230px;
+  }
+
+  .six-card-field {
+    width: 483px;
+    height: 484px;
+  }
+
+  .ten-card-field {
+    width: 760px;
+    height: 484px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .wrap {
+    max-width: 768px;
+    max-height: 1024px;
+    min-height: 800px;
+  }
+
+  .menu {
+    margin: 40px 40px;
+  }
+
+  .title h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .easy,
+  .medium,
+  .hard {
+    font-size: 38px;
+    margin: 0;
+  }
+
+  .difficulty-levels {
+    margin-bottom: 50px;
+  }
+
+  .start-button {
+    width: 290px;
+    height: 80px;
+    margin: 0 0 30px 0;
+    font-size: 25px;
+  }
+
+  .pictures {
+    display: none;
+  }
+
+  .card-wrap,
+  .card-back,
+  .winner-card,
+  .looser-card {
+    width: 85px;
+    height: 140px;
+    background-size: 86px 142px;
+  }
+
+  .three-card-field {
+    width: 279px;
+    height: 164px;
+  }
+
+  .six-card-field {
+    width: 279px;
+    height: 304px;
+  }
+
+  .ten-card-field {
+    width: 473px;
+    height: 304px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .wrap {
+    max-width: 480px;
+    max-height: 750px;
+    min-height: 740px;
+  }
+
+  .menu {
+    margin: 20px 20px;
+  }
+
+  .title h2 {
+    font: 40px;
+    margin: 0 0 8px 0;
+  }
+
+  .title h3 {
+    margin-bottom: 20px;
+  }
+
+  .level {
+    margin-bottom: 15px;
+  }
+
+  .easy,
+  .medium,
+  .hard {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .difficulty-levels {
+    margin-bottom: 30px;
+  }
+
+  .start-button {
+    width: 250px;
+    height: 80px;
+    font: 25px;
+    margin: 0 0 20px 0;
+  }
+
+  .pictures {
+    display: none;
+  }
+
+  .card-wrap,
+  .card-back,
+  .winner-card,
+  .looser-card {
+    width: 63px;
+    height: 100px;
+    background-size: 64px 102px;
+  }
+
+  .three-card-field {
+    width: 210px;
+    height: 100px;
+  }
+
+  .six-card-field {
+    width: 209px;
+    height: 224px;
+  }
+
+  .ten-card-field {
+    width: 138px;
+    height: 540px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrap {
+    max-width: 480px;
+    max-height: 750px;
+    min-height: 560px;
+  }
+
+  .menu {
+    margin: 15px 15px;
+  }
+
+  .title {
+    margin: 0 25px 0 25px;
+  }
+
+  .title h2 {
+    font-size: 25px;
+    margin: 0 0 8px 0;
+  }
+
+  .title h3 {
+    font-size: 15px;
+  }
+
+  .level {
+    margin-bottom: 15px;
+  }
+
+  .easy,
+  .medium,
+  .hard {
+    font-size: 15px;
+    margin: 0;
+  }
+
+.level:visited::before,
+.level:hover::before,
+.level:active::before,
+.level_active:before {
+  left: 0;
+  top: 0;
+}
+
+  .difficulty-levels {
+    margin: 0 50px 30px 50px;
+  }
+
+  .start-button {
+    width: 250px;
+    height: 80px;
+    font: 25px;
+    margin: 0 20px 20px 20px;
+  }
+
+  .pictures {
+    display: none;
+  }
+
+  .card-wrap,
+  .card-back,
+  .winner-card,
+  .looser-card {
+    width: 63px;
+    height: 100px;
+    background-size: 64px 102px;
+  }
+
+  .three-card-field {
+    width: 210px;
+    height: 100px;
+  }
+
+  .six-card-field {
+    width: 209px;
+    height: 224px;
+  }
+
+  .ten-card-field {
+    width: 138px;
+    height: 540px;
+  }
+}

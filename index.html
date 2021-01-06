@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>find a bug</title>
+</head>
+<body class="wrap">
+  <div class="menu" id="menu">
+    <header class="title">
+      <h2>Выберите уровень сложности:</h2>
+      <h3>Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</h3>
+    </header>
+    <div class="difficulty-levels">
+      <label class="level level_active" for="easy" id="label-easy">
+        <input class="easy" type="button" name="easy" value="Простой" id="easy">
+      </label>
+      <label class="level" for="medium" id="label-medium">
+        <input class="medium" type="button" name="medium" value="Средний" id="medium">
+      </label>
+      <label class="level" for="hard" id="label-hard">
+        <input class="hard" type="button" name="hard" value="Сложный" id="hard">
+      </label>
+    </div>
+    <input class="start-button" type="button" name="start" value="Начать игру" id="start-button">
+    <div class="pictures" id="card-pictures">
+      <img src="./img/card.png" class="bottom-card">
+      <img src="./img/card.png" class="top-card">
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
